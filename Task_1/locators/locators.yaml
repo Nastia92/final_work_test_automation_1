@@ -1,0 +1,8 @@
+login_page:
+  username_field: "input[type='text']"
+  password_field: "input[type='password']"
+  login_button: "button[type='submit']"
+
+about_page:
+  about_link: "a[href='/about']"
+  header: "h1"
