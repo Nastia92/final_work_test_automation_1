@@ -20,11 +20,11 @@ try:
     user_id = data.get("id") or data.get("user_id")
     username = data.get("username")
 
-    print(f"✅ Получен токен: {token}")
-    print(f"🆔 ID пользователя: {user_id}")
-    print(f"👤 Имя пользователя: {username}")
+    print(f" Получен токен: {token}")
+    print(f" ID пользователя: {user_id}")
+    print(f" Имя пользователя: {username}")
 except Exception as e:
-    print("❌ Не удалось распарсить JSON:", e)
+    print(" Не удалось распарсить JSON:", e)
     exit()
 
 url_profile = f"https://test-stand.gb.ru/api/users/profile/{user_id}"
@@ -42,4 +42,4 @@ assert response_profile.status_code == 200, f"Ошибка получения п
 profile_data = response_profile.json()
 assert profile_data.get("username") == username, "Имя пользователя не совпадает!"
 
-print("✅ Проверка успешна. Имя пользователя совпадает.")
+print(" Проверка успешна. Имя пользователя совпадает.")
